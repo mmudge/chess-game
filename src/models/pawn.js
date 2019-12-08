@@ -7,5 +7,3 @@ export default class Pawn {
     return 'hello world' + this.name
   }
 }
-
-module.exports = Pawn
