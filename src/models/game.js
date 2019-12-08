@@ -28,9 +28,7 @@ export default class Game {
         if (squareKey === pPosition.position) {
           //TODO figure out pawn names
           const p = new Pawn(`p${index}`)
-
           this.state[squareKey].piece = p
-
         }
       })
     })
@@ -48,6 +46,7 @@ export default class Game {
   }
 
   setInitialState() {
+    // TODO make this more dry with Board.squares()
     this.state = {
       a1: { classSelector: '.row-1 .col-a', piece: null },
       b1: { classSelector: '.row-1 .col-b', piece: null },
@@ -115,5 +114,4 @@ export default class Game {
       h8: { classSelector: '.row-8 .col-h', piece: null }
     }
   }
-
 }
