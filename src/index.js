@@ -1,10 +1,11 @@
 import './style.css'
 import Pawn from './models/pawn.js'
 import Board from './models/board.js'
+import Game from './models/game.js'
 
-let state = {}
-let board = new Board(state)
-board.init()
+
+let game = new Game()
+game.init()
 
 let numberOfMoves = 0
 let selectedPiece = ''
@@ -46,3 +47,17 @@ function makeMove() {
 }
 
 makeMove()
+
+// const p = new Pawn('p1')
+// console.log('pawn starting position', p.startingPosition)
+// p.currentPosition = {square: 'a1', classSelector: 'asdf'}
+// console.log('current position', p )
+// console.log('pawn starting positions', Pawn.startingPositions())
+// let pieces = []
+// const pawnStartingPositions = Pawn.startingPositions()
+// pawnStartingPositions.forEach((position) => {
+//   let pawn = new Pawn('pawn')
+//   pawn.currentPosition = position
+//   pieces.push(pawn)
+// })
+// console.log(pieces)
